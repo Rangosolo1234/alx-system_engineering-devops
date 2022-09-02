@@ -1,0 +1,2 @@
+#!/bin/bash
+chmos ug+x,o+r hello
