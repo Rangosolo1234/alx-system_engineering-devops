@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#loops from 1 to 10 displays:
+#"Bad luck" for 4th iteral
+#"good luck for 8th iteral
+#"Best School" for the remaining
+
+cnt=0
+
+while [ $cnt -lt 10 ]
+do
+	if [ $cnt -eq 3 ]
+	then
+		echo "bad luck"
+	elif [ $cnt -eq 7 ]
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	(( cnt++ ))
+done
