@@ -12,6 +12,7 @@ do
 	then
 		echo "bad luck"
 	elif [ $cnt -eq 7 ]
+	then
 		echo "good luck"
 	else
 		echo "Best School"
