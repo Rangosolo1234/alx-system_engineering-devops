@@ -1,3 +1,6 @@
-#!/usr/bash/env bash
-#Bash script that stops 4-to_infinity_and_beyond process
-kill "$(ps -x | pgrep -f beyond)"
+#!/usr/bin/env bash
+# This script displays a statement indefinitely
+while true; do
+    echo "To infinity and beyond"
+    kill
+done
