@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get the PID of the process
+PID=$(ps aux | grep '4-to_infinity_and_beyond' | grep -v grep | awk '{print $2}')
+
+if [[ -n "$PID" ]]; then
+  # Send a SIGINT signal to the process
+  printf '\x03' | tee /proc/$PID/fd/0 > /dev/null
+  echo "Process stopped"
+else
+  echo "Process not found"
+fi
