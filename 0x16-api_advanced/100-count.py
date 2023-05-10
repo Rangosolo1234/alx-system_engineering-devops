@@ -30,8 +30,7 @@ def count_words(subreddit, word_list=[], after=None, cleaned_dict=None):
 
     user_agent = {'User-agent': 'Google Chrome Version 112.0.5615.139'}
 
-    url = 'https://www.reddit.com/r/{}/hot/.json?after={}'.format(subreddit,
-                                                                  after)
+    url = 'https://www.reddit.com/r/{}/hot/.json?after={}'.format(subreddit,after)
 
     response = get(url, headers=user_agent, params=params)
 
