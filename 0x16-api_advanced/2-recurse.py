@@ -9,7 +9,7 @@ from requests import get
 
 def recurse(subreddit, hot_list=[], after=None):
     """
-    function that queries the Reddit API using recursion
+    Recursion--------------------------------------------
     """
 
     params = {'show': 'all'}
@@ -19,8 +19,7 @@ def recurse(subreddit, hot_list=[], after=None):
 
     user_agent = {'User-agent': 'Google Chrome Version 112.0.5615.139'}
 
-    url = 'https://www.reddit.com/r/{}/hot/.json?after={}'.format(subreddit,
-                                                                  after)
+    url = 'https://www.reddit.com/r/{}/hot/.json?after={}'.format(subreddit, after)
 
     response = get(url, headers=user_agent, params=params)
 
